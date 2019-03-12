@@ -1,5 +1,5 @@
-# Differentially-Private-Online-Transfer-Learning-for-Reinforcement-Learning-in-Partially-Observable-Environment
-Demo code for the paper "Differentially Private Online Transfer Learning for Reinforcement Learning in Partially Observable Environment"
+# Differential Knowledge Transfer with Relevance Weight (DTW)
+Demo code for the paper "Multi-Agent Reinforcement Learning via Knowledge Transfer with Differential Noise and Relevance Weights"
 
 ### Required Dependencies:
 - NVIDIA GPU
@@ -15,18 +15,13 @@ Demo code for the paper "Differentially Private Online Transfer Learning for Rei
 
 #### There are 3 experiments included in the demo code.
 - Ex1 is the environment that robots collecting the rubbish at static positions.
-- Ex2 is the environment that has a probability of generating new rubbish at each step.
 - Ex3 is the environment that robots rescuing victims who have a probability of moving to a new position at each step.
 #### In each experiment file directory, there are three enviroments.
-- env1.py is used to test the performance of Reinforcement Learning Method.
-- env2.py is used to test the performance of Differetially Private Online Transfer Learning Method.
-- env3.py is used to test the performance of Differetially Private Online Transfer Learning Method with Malicious Agent.
-#### To test the performance of Random Method in all the three experiments, you need to open env1.py in the three experiment folders and then toggle comment at the following lines:
-- "file = open('Ex#Random.txt','w')"
-- "filename = "ExWithoutTL(" + currentDT.strftime("%H-%M-%S %Y-%m-%d") + ").txt""
-- "file = open(filename,'w')"
-- "env.step(env.sample_action())"
-- "env.step(env.algorithm_one())"
+- Random.py is used to test the performance of Random Method.
+- RL.py is used to test the performance of Reinforcement Learning Method.
+- TL.py is used to test the performance of basic Transfer Learning Method.
+- TW.py is used to test the performance of Transfer Learning with Relevance Weights.
+- DTW.py is used to test the performance of Differential Knowledge Transfer With Relevance Weights.
 #### 2. Adjustable variables:
 - Window size: WINDOW_WIDTH, WINDOW_HEIGHT
 - Number of objects: RUBBISH_NUM (VICTIM_NUM in Ex3), BLOCK_NUM, BOT_NUM
